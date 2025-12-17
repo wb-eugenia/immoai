@@ -8,12 +8,15 @@ export async function POST(request: Request) {
     
     console.log("📤 Envoi au webhook n8n:", body)
     
-    const response = await fetch(N8N_WEBHOOK_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(body),
+    // Construction de l'URL avec les paramètres en query string pour GET
+    const params = new URLSearchParams({
+      firstName: body.firstName || "",
+      lastName: body.lastName || "",
+      email: body.email || "",
+    })
+    
+    const response = await fetch(`${N8N_WEBHOOK_URL}?${params.toString()}`, {
+      method: "GET",
     })
 
     const responseText = await response.text()
