@@ -8,6 +8,7 @@ export function Footer() {
   const pathname = usePathname()
   const isHubPage = pathname === "/the-hub"
   const isPricingPage = pathname === "/pricing"
+  const isContactPage = pathname === "/contact"
   
   // Si on est sur /the-hub, on doit rediriger vers la page d'accueil avec l'ancre
   // Si on est sur /pricing, on pointe vers /pricing
@@ -16,6 +17,10 @@ export function Footer() {
     if (isPricingPage) return "/pricing"
     if (isHubPage) return "/pricing"
     return "#pricing"
+  }
+  
+  const getContactLink = () => {
+    return "/contact"
   }
   
   const getLink = (anchor: string) => {
@@ -42,7 +47,7 @@ export function Footer() {
             <Link href={getLink("faq")} className="hover:text-gray-900 transition-colors">FAQ</Link>
             <Link href="#" className="hover:text-gray-900 transition-colors">Politique de confidentialité</Link>
             <Link href="#" className="hover:text-gray-900 transition-colors">CGV</Link>
-            <Link href={getLink("contact")} className="hover:text-gray-900 transition-colors">Contact</Link>
+            <Link href={getContactLink()} className="hover:text-gray-900 transition-colors">Contact</Link>
           </div>
         </div>
       </div>

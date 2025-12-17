@@ -9,6 +9,7 @@ export function Navbar() {
   const pathname = usePathname()
   const isHubPage = pathname === "/the-hub"
   const isPricingPage = pathname === "/pricing"
+  const isContactPage = pathname === "/contact"
   
   // Si on est sur /the-hub, on doit rediriger vers la page d'accueil avec l'ancre
   // Si on est sur /pricing, on pointe vers /pricing
@@ -17,6 +18,10 @@ export function Navbar() {
     if (isPricingPage) return "/pricing"
     if (isHubPage) return "/pricing"
     return "#pricing"
+  }
+  
+  const getContactLink = () => {
+    return "/contact"
   }
   
   const getLink = (anchor: string) => {
@@ -36,7 +41,7 @@ export function Navbar() {
           <Link href="/the-hub" className="hover:text-gray-900 transition-colors">The Hub</Link>
           <Link href={getPricingLink()} className="hover:text-gray-900 transition-colors">Tarifs</Link>
           <Link href={getLink("faq")} className="hover:text-gray-900 transition-colors">FAQ</Link>
-          <Link href={getLink("contact")} className="hover:text-gray-900 transition-colors">Contact</Link>
+          <Link href={getContactLink()} className="hover:text-gray-900 transition-colors">Contact</Link>
         </div>
 
         <div className="flex items-center gap-4">
