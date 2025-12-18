@@ -73,7 +73,7 @@ export function LeadForm() {
           <Sparkles className="w-8 h-8" />
           <p className="font-semibold text-lg">Demande reçue !</p>
           <p className="text-sm text-center text-green-600/80">
-            Nous avons bien reçu vos informations. Nous vous contacterons très prochainement pour votre plan 3D.
+            Nous avons bien reçu vos informations. Nous vous contacterons très prochainement pour votre accès.
           </p>
           <Button 
             variant="ghost" 
@@ -83,7 +83,7 @@ export function LeadForm() {
               setError(null)
             }}
           >
-            Envoyer une autre demande
+            Inscrire une autre personne
           </Button>
         </div>
       </div>
@@ -91,7 +91,7 @@ export function LeadForm() {
   }
 
   return (
-    <form onSubmit={form.handleSubmit(onSubmit)} className="w-full max-w-lg mx-auto bg-white p-4 rounded-xl border border-beige-200 shadow-sm backdrop-blur-md">
+    <form onSubmit={form.handleSubmit(onSubmit)} className="w-full max-w-lg mx-auto bg-white p-6 rounded-xl border border-gray-200 shadow-sm backdrop-blur-md">
       {error && (
         <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
           {error}
@@ -152,7 +152,7 @@ export function LeadForm() {
 
         <Button 
           type="submit" 
-          className="w-full bg-black hover:bg-gray-800 text-white font-semibold"
+          className="w-full bg-black hover:bg-gray-800 text-white font-semibold h-12 text-base"
           disabled={isLoading}
         >
           {isLoading ? (
@@ -161,7 +161,7 @@ export function LeadForm() {
               Envoi en cours...
             </>
           ) : (
-            "Recevoir mon exemple 3D"
+            "Rejoindre la waitlist"
           )}
         </Button>
       </div>

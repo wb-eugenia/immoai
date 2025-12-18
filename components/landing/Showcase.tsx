@@ -16,6 +16,21 @@ export function Showcase() {
           </p>
         </div>
 
+        {/* Video Placeholder */}
+        <div className="mb-20">
+          <div className="relative w-full max-w-5xl mx-auto aspect-video bg-white flex items-center justify-center shadow-lg border border-gray-100 overflow-hidden">
+            <div className="text-center">
+              <div className="text-6xl mb-4 opacity-50">🎥</div>
+              <p className="text-gray-900 text-lg font-medium">
+                Vidéo de démonstration à enregistrer
+              </p>
+              <p className="text-gray-500 text-sm mt-2 font-light">
+                Cette section affichera votre vidéo de démonstration
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Format 1: Vue Isométrique */}
           <motion.div 

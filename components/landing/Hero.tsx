@@ -1,13 +1,9 @@
 "use client"
 
-import { useState } from "react"
-import { LeadForm } from "./LeadForm"
 import { motion } from "framer-motion"
+import { LeadForm } from "./LeadForm"
 
 export function Hero() {
-  const [isGenerating, setIsGenerating] = useState(false)
-
-
   return (
     <section className="relative flex flex-col items-center justify-center px-4 py-32 text-center md:py-48 overflow-hidden bg-beige-50">
       {/* Subtle Background */}
