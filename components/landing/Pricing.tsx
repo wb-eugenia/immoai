@@ -77,44 +77,44 @@ export function Pricing() {
   const tiers = isYearly ? yearlyTiers : monthlyTiers
 
   return (
-    <section id="pricing" className="py-24 bg-beige-50">
+    <section id="pricing" className="py-16 md:py-20 lg:py-24 bg-beige-50">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
-        <div className="text-center mb-16 space-y-4">
-          <h2 className="text-3xl font-serif font-bold tracking-tight sm:text-4xl text-gray-900">
+        <div className="text-center mb-10 md:mb-12 lg:mb-16 space-y-3 md:space-y-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold tracking-tight text-gray-900 px-4">
             Tarifs simples et transparents
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto font-light">
+          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto font-light px-4">
             Choisissez le plan qui correspond à vos besoins. Tous les plans incluent des modélisations 3D professionnelles générées par IA.
           </p>
         </div>
 
         {/* Toggle */}
-        <div className="flex items-center justify-center gap-4 mb-12">
-          <span className={`text-sm font-medium ${!isYearly ? 'text-gray-900' : 'text-gray-400'}`}>
+        <div className="flex items-center justify-center gap-3 md:gap-4 mb-8 md:mb-12 px-4">
+          <span className={`text-xs md:text-sm font-medium ${!isYearly ? 'text-gray-900' : 'text-gray-400'}`}>
             Mensuel
           </span>
           <button
             onClick={() => setIsYearly(!isYearly)}
-            className={`relative w-14 h-7 rounded-full transition-colors ${
+            className={`relative w-12 h-6 md:w-14 md:h-7 rounded-full transition-colors ${
               isYearly ? 'bg-gray-900' : 'bg-gray-200'
             }`}
           >
             <div
-              className={`absolute top-1 left-1 w-5 h-5 bg-white rounded-full transition-transform ${
-                isYearly ? 'translate-x-7' : 'translate-x-0'
+              className={`absolute top-0.5 left-0.5 md:top-1 md:left-1 w-5 h-5 bg-white rounded-full transition-transform ${
+                isYearly ? 'translate-x-6 md:translate-x-7' : 'translate-x-0'
               }`}
             />
           </button>
-          <span className={`text-sm font-medium ${isYearly ? 'text-gray-900' : 'text-gray-400'}`}>
+          <span className={`text-xs md:text-sm font-medium ${isYearly ? 'text-gray-900' : 'text-gray-400'}`}>
             Annuel <span className="text-green-600 font-bold ml-1">-20%</span>
           </span>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-7xl mx-auto">
           {tiers.map((tier) => (
             <div 
               key={tier.name}
-              className={`relative flex flex-col p-6 rounded-none border transition-all hover:shadow-lg ${
+              className={`relative flex flex-col p-5 md:p-6 rounded-none border transition-all hover:shadow-lg ${
                 tier.dark
                   ? "bg-gray-900 text-white border-gray-900"
                   : tier.popular
@@ -123,41 +123,41 @@ export function Pricing() {
               }`}
             >
               {tier.popular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-black text-xs font-medium text-white shadow-sm">
+                <div className="absolute -top-2.5 md:-top-3 left-1/2 -translate-x-1/2 px-2.5 md:px-3 py-0.5 md:py-1 rounded-full bg-black text-[10px] md:text-xs font-medium text-white shadow-sm">
                   Populaire
                 </div>
               )}
 
-              <div className="mb-6">
-                <h3 className={`text-xl font-serif font-semibold mb-2 ${tier.dark ? 'text-white' : 'text-gray-900'}`}>
+              <div className="mb-5 md:mb-6">
+                <h3 className={`text-lg md:text-xl font-serif font-semibold mb-2 ${tier.dark ? 'text-white' : 'text-gray-900'}`}>
                   {tier.name}
                 </h3>
                 <div className="flex items-baseline gap-1">
-                  <span className={`text-3xl font-bold ${tier.dark ? 'text-white' : 'text-gray-900'}`}>
+                  <span className={`text-2xl md:text-3xl font-bold ${tier.dark ? 'text-white' : 'text-gray-900'}`}>
                     {tier.price}
                   </span>
                   {tier.period && (
-                    <span className={`text-sm ${tier.dark ? 'text-gray-400' : 'text-gray-500'}`}>
+                    <span className={`text-xs md:text-sm ${tier.dark ? 'text-gray-400' : 'text-gray-500'}`}>
                       {tier.period}
                     </span>
                   )}
                 </div>
-                <p className={`mt-3 text-sm font-light ${tier.dark ? 'text-gray-400' : 'text-gray-500'}`}>
+                <p className={`mt-2 md:mt-3 text-xs md:text-sm font-light ${tier.dark ? 'text-gray-400' : 'text-gray-500'}`}>
                   {tier.description}
                 </p>
               </div>
 
-              <ul className="space-y-3 mb-6 flex-1">
+              <ul className="space-y-2.5 md:space-y-3 mb-5 md:mb-6 flex-1">
                 {tier.features.map((feature) => (
-                  <li key={feature} className={`flex items-start gap-2 text-sm font-light ${tier.dark ? 'text-gray-300' : 'text-gray-600'}`}>
-                    <Check className={`w-4 h-4 shrink-0 mt-0.5 ${tier.dark ? 'text-white' : 'text-gray-900'}`} />
+                  <li key={feature} className={`flex items-start gap-2 text-xs md:text-sm font-light ${tier.dark ? 'text-gray-300' : 'text-gray-600'}`}>
+                    <Check className={`w-3.5 h-3.5 md:w-4 md:h-4 shrink-0 mt-0.5 ${tier.dark ? 'text-white' : 'text-gray-900'}`} />
                     {feature}
                   </li>
                 ))}
               </ul>
 
               <Button 
-                className={`w-full rounded-none font-medium border-0 ${
+                className={`w-full rounded-none font-medium border-0 text-sm md:text-base h-10 md:h-11 ${
                   tier.dark
                     ? "bg-white text-gray-900 hover:bg-gray-100"
                     : tier.popular

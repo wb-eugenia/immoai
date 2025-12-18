@@ -46,31 +46,31 @@ const faqs = [
 
 export function FAQ() {
   return (
-    <section id="faq" className="py-24 bg-white">
+    <section id="faq" className="py-16 md:py-20 lg:py-24 bg-white">
       <div className="max-w-4xl mx-auto px-4 md:px-6">
-        <div className="text-center mb-12 space-y-4">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold tracking-tight text-gray-900">
+        <div className="text-center mb-8 md:mb-10 lg:mb-12 space-y-3 md:space-y-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold tracking-tight text-gray-900 px-4">
             Des questions ? Nous avons les réponses
           </h2>
-          <p className="text-lg text-gray-500 font-light">
+          <p className="text-base md:text-lg text-gray-500 font-light px-4">
             Tout ce que vous devez savoir pour commencer et grandir avec ImmoAI.
           </p>
         </div>
 
         {/* Benefits */}
-        <div className="flex flex-wrap items-center justify-center gap-6 mb-12">
-          <div className="flex items-center gap-2 text-sm text-gray-600">
-            <Check className="w-4 h-4 text-gray-900" />
+        <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 mb-8 md:mb-12 px-4">
+          <div className="flex items-center gap-2 text-xs md:text-sm text-gray-600">
+            <Check className="w-3.5 h-3.5 md:w-4 md:h-4 text-gray-900" />
             <span>Aucune carte bancaire requise</span>
           </div>
-          <div className="flex items-center gap-2 text-sm text-gray-600">
-            <Check className="w-4 h-4 text-gray-900" />
+          <div className="flex items-center gap-2 text-xs md:text-sm text-gray-600">
+            <Check className="w-3.5 h-3.5 md:w-4 md:h-4 text-gray-900" />
             <span>Annulation à tout moment</span>
           </div>
         </div>
 
         {/* FAQ Accordion */}
-        <div className="bg-white border border-gray-100 rounded-none p-6 mb-16 shadow-sm">
+        <div className="bg-white border border-gray-100 rounded-none p-4 md:p-6 mb-12 md:mb-16 shadow-sm">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
               <AccordionItem 
@@ -78,10 +78,10 @@ export function FAQ() {
                 value={`item-${index}`} 
                 className="border-b border-gray-100 last:border-b-0"
               >
-                <AccordionTrigger className="text-left text-base font-medium text-gray-900 hover:text-black hover:no-underline py-4">
+                <AccordionTrigger className="text-left text-sm md:text-base font-medium text-gray-900 hover:text-black hover:no-underline py-3 md:py-4">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-gray-500 text-sm pb-4 font-light">
+                <AccordionContent className="text-gray-500 text-xs md:text-sm pb-3 md:pb-4 font-light">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -90,22 +90,22 @@ export function FAQ() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="bg-gray-900 rounded-none p-12 text-center text-white">
-          <h3 className="text-2xl md:text-3xl font-serif font-bold mb-4">
+        <div className="bg-gray-900 rounded-none p-8 md:p-10 lg:p-12 text-center text-white">
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold mb-3 md:mb-4 px-4">
             Prêt à créer votre première visualisation ?
           </h3>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto font-light">
+          <p className="text-sm md:text-base text-gray-300 mb-6 md:mb-8 max-w-2xl mx-auto font-light px-4">
             Commencez à créer des visualisations 3D professionnelles à partir de n'importe quel plan. Commencez gratuitement, aucune carte bancaire requise.
           </p>
-          <Button className="bg-white text-gray-900 hover:bg-gray-100 px-8 py-6 text-lg mb-8 rounded-none border-0" asChild>
+          <Button className="bg-white text-gray-900 hover:bg-gray-100 px-6 md:px-8 py-5 md:py-6 text-base md:text-lg mb-6 md:mb-8 rounded-none border-0" asChild>
             <a href="/signup">Commencer l'essai gratuit</a>
           </Button>
-          <div className="flex items-center justify-center gap-8 text-sm text-gray-400">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-8 text-xs md:text-sm text-gray-400">
             <div className="text-center">
               <div className="font-semibold text-white mb-1">5-15min</div>
               <div>Génération</div>
             </div>
-            <div className="w-px h-12 bg-gray-700" />
+            <div className="hidden sm:block w-px h-12 bg-gray-700" />
             <div className="text-center">
               <div className="font-semibold text-white mb-1">Qualité HD</div>
               <div>Visualisations professionnelles</div>
