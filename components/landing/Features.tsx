@@ -4,48 +4,45 @@ import { Building2, Home, PenTool } from "lucide-react"
 
 export function Features() {
   return (
-    <section className="py-24 relative overflow-hidden">
-      {/* Decorative gradient */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-blue-900/20 blur-[100px] rounded-full pointer-events-none" />
-
-      <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
-        <div className="text-center mb-16 space-y-4">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Des solutions sur mesure pour chaque métier
+    <section className="py-32 bg-white relative">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <div className="text-center mb-20 space-y-6">
+          <h2 className="text-4xl md:text-5xl font-serif text-gray-900">
+            L'excellence pour chaque profession
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-            Nous avons optimisé nos modèles pour répondre aux besoins spécifiques des professionnels de l'immobilier.
+          <p className="text-lg text-gray-500 max-w-2xl mx-auto font-light">
+            Une suite d'outils pensée pour sublimer vos projets et accélérer vos signatures.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
-            <div className="w-12 h-12 rounded-lg bg-blue-500/20 flex items-center justify-center mb-6">
-              <Home className="w-6 h-6 text-blue-400" />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="group">
+            <div className="w-16 h-16 rounded-full bg-beige-50 flex items-center justify-center mb-8 group-hover:bg-beige-100 transition-colors">
+              <Home className="w-8 h-8 text-gray-900 stroke-1" />
             </div>
-            <h3 className="text-xl font-semibold mb-3">Agents Immobiliers</h3>
-            <p className="text-gray-400">
-              Accélérez vos ventes en aidant les acheteurs à se projeter. Démarquez vos annonces avec des visuels haut de gamme.
+            <h3 className="text-2xl font-serif mb-4 text-gray-900">Agents Immobiliers</h3>
+            <p className="text-gray-500 leading-relaxed font-light">
+              Offrez une expérience de visite inégalée. Permettez à vos clients de se projeter instantanément et réduisez les délais de vente.
             </p>
           </div>
 
-          <div className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
-            <div className="w-12 h-12 rounded-lg bg-purple-500/20 flex items-center justify-center mb-6">
-              <PenTool className="w-6 h-6 text-purple-400" />
+          <div className="group">
+            <div className="w-16 h-16 rounded-full bg-beige-50 flex items-center justify-center mb-8 group-hover:bg-beige-100 transition-colors">
+              <PenTool className="w-8 h-8 text-gray-900 stroke-1" />
             </div>
-            <h3 className="text-xl font-semibold mb-3">Architectes d'Intérieur</h3>
-            <p className="text-gray-400">
-              Validez vos concepts rapidement. Montrez le potentiel d'une rénovation avant même le début des travaux.
+            <h3 className="text-2xl font-serif mb-4 text-gray-900">Architectes d'Intérieur</h3>
+            <p className="text-gray-500 leading-relaxed font-light">
+              Donnez vie à vos concepts en quelques minutes. Validez vos idées auprès de vos clients avant même de commencer les travaux.
             </p>
           </div>
 
-          <div className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
-            <div className="w-12 h-12 rounded-lg bg-green-500/20 flex items-center justify-center mb-6">
-              <Building2 className="w-6 h-6 text-green-400" />
+          <div className="group">
+            <div className="w-16 h-16 rounded-full bg-beige-50 flex items-center justify-center mb-8 group-hover:bg-beige-100 transition-colors">
+              <Building2 className="w-8 h-8 text-gray-900 stroke-1" />
             </div>
-            <h3 className="text-xl font-semibold mb-3">Promoteurs</h3>
-            <p className="text-gray-400">
-              Commercialisez vos biens sur plan plus efficacement. Créez des supports marketing attractifs en quelques clics.
+            <h3 className="text-2xl font-serif mb-4 text-gray-900">Promoteurs</h3>
+            <p className="text-gray-500 leading-relaxed font-light">
+              Vendez sur plan avec une efficacité redoutable. Créez des visuels marketing haute définition qui captivent et convertissent.
             </p>
           </div>
         </div>
@@ -53,4 +50,3 @@ export function Features() {
     </section>
   )
 }
-

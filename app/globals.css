@@ -1,9 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* --font-sans and --font-serif are defined in layout.tsx via next/font */
   
+  --color-beige-50: #faf9f6;
+  --color-beige-100: #f5f5f0;
+  --color-beige-200: #e6e4dc;
+  --color-beige-300: #d1cfc7;
+  --color-beige-400: #bcb9b0;
+  --color-beige-500: #a7a49b;
+  --color-beige-600: #8f8c84;
+  --color-beige-700: #76746d;
+  --color-beige-800: #5e5c57;
+  --color-beige-900: #454440;
+
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
 
@@ -18,12 +28,16 @@
 }
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --background: #faf9f6;
+  --foreground: #1a1a1a;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif), Georgia, 'Times New Roman', serif;
 }

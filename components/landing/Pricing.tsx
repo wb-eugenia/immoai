@@ -51,13 +51,13 @@ const tiers = [
 
 export function Pricing() {
   return (
-    <section id="pricing" className="py-24 bg-black/50">
+    <section id="pricing" className="py-24 bg-beige-50">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-black">
             Des tarifs simples et transparents
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Commencez gratuitement, évoluez selon vos besoins. Aucun frais caché.
           </p>
         </div>
@@ -68,29 +68,29 @@ export function Pricing() {
               key={tier.name}
               className={`relative flex flex-col p-8 rounded-2xl border ${
                 tier.popular 
-                  ? "bg-white/10 border-blue-500 shadow-2xl shadow-blue-900/20" 
-                  : "bg-white/5 border-white/10"
+                  ? "bg-white border-black shadow-xl shadow-black/5" 
+                  : "bg-white border-beige-200"
               }`}
             >
               {tier.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-blue-500 text-sm font-medium text-white shadow-lg">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-black text-sm font-medium text-white shadow-lg">
                   Le plus populaire
                 </div>
               )}
 
               <div className="mb-8">
-                <h3 className="text-xl font-semibold mb-2">{tier.name}</h3>
+                <h3 className="text-xl font-semibold mb-2 text-black">{tier.name}</h3>
                 <div className="flex items-baseline gap-1">
-                  <span className="text-4xl font-bold">{tier.price}</span>
-                  {tier.period && <span className="text-gray-400">{tier.period}</span>}
+                  <span className="text-4xl font-bold text-black">{tier.price}</span>
+                  {tier.period && <span className="text-gray-600">{tier.period}</span>}
                 </div>
-                <p className="mt-4 text-gray-400 text-sm">{tier.description}</p>
+                <p className="mt-4 text-gray-600 text-sm">{tier.description}</p>
               </div>
 
               <ul className="space-y-4 mb-8 flex-1">
                 {tier.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-3 text-sm text-gray-300">
-                    <Check className="w-5 h-5 text-blue-500 shrink-0" />
+                  <li key={feature} className="flex items-start gap-3 text-sm text-gray-600">
+                    <Check className="w-5 h-5 text-black shrink-0" />
                     {feature}
                   </li>
                 ))}
@@ -98,7 +98,7 @@ export function Pricing() {
 
               <Button 
                 variant={tier.popular ? "default" : "outline"}
-                className={`w-full ${tier.popular ? "bg-blue-600 hover:bg-blue-700" : "bg-transparent border-white/20 hover:bg-white/5 text-white"}`}
+                className={`w-full ${tier.popular ? "bg-black hover:bg-gray-800 text-white" : "bg-white border-gray-200 hover:bg-gray-50 text-black"}`}
                 asChild
               >
                 <a href="/signup">{tier.cta}</a>
@@ -110,4 +110,3 @@ export function Pricing() {
     </section>
   )
 }
-

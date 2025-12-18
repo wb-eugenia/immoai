@@ -5,14 +5,14 @@ import { Monitor, Smartphone, Layers } from "lucide-react"
 
 export function Showcase() {
   return (
-    <section id="showcase" className="py-24 bg-black/50">
+    <section id="showcase" className="py-32 bg-beige-50">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
-        <div className="text-center mb-16 space-y-4">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Tous les formats en un seul endroit
+        <div className="text-center mb-20 space-y-6">
+          <h2 className="text-4xl md:text-5xl font-serif text-gray-900">
+            Une plateforme, tous les formats
           </h2>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-            Générez des visuels optimisés pour chaque besoin. Un seul upload, des possibilités infinies.
+          <p className="text-lg text-gray-500 max-w-2xl mx-auto font-light">
+            Générez automatiquement tous les visuels dont vous avez besoin. Un seul plan suffit.
           </p>
         </div>
 
@@ -20,63 +20,54 @@ export function Showcase() {
           {/* Format 1: Vue Isométrique */}
           <motion.div 
             whileHover={{ y: -5 }}
-            className="group relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 p-6 hover:border-blue-500/50 transition-colors"
+            className="group relative overflow-hidden bg-white p-8 hover:shadow-lg transition-all duration-300 border border-gray-100"
           >
-            <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-              <Layers className="w-24 h-24" />
-            </div>
-            <div className="h-48 rounded-lg bg-gradient-to-br from-gray-800 to-gray-900 mb-6 flex items-center justify-center border border-white/5">
+            <div className="h-56 bg-beige-50 mb-8 flex items-center justify-center border border-beige-100 overflow-hidden">
                {/* Placeholder for 3D Isometric Image */}
-               <span className="text-gray-500 font-mono text-sm">Aperçu Isométrique</span>
+               <Layers className="w-12 h-12 text-beige-300" />
             </div>
-            <h3 className="text-xl font-semibold mb-2">Vue Isométrique 3D</h3>
-            <p className="text-gray-400 text-sm">
-              Idéal pour visualiser l'agencement global et les volumes des pièces en un coup d'œil.
+            <h3 className="text-xl font-serif mb-3 text-gray-900">Vue Isométrique 3D</h3>
+            <p className="text-gray-500 text-sm leading-relaxed mb-6 font-light">
+              La vue parfaite pour comprendre les volumes. Idéal pour présenter l'agencement global d'un bien en un seul coup d'œil.
             </p>
-            <div className="mt-4 inline-flex items-center text-xs font-medium px-2.5 py-0.5 rounded-full bg-blue-500/10 text-blue-400">
-              16:9 • Desktop & Web
+            <div className="inline-flex items-center text-xs font-medium px-3 py-1 bg-gray-50 text-gray-600 uppercase tracking-wider">
+              Desktop & Web
             </div>
           </motion.div>
 
           {/* Format 2: Visite Virtuelle */}
           <motion.div 
             whileHover={{ y: -5 }}
-            className="group relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 p-6 hover:border-purple-500/50 transition-colors"
+            className="group relative overflow-hidden bg-white p-8 hover:shadow-lg transition-all duration-300 border border-gray-100"
           >
-            <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-              <Smartphone className="w-24 h-24" />
-            </div>
-            <div className="h-48 rounded-lg bg-gradient-to-br from-gray-800 to-gray-900 mb-6 flex items-center justify-center border border-white/5">
+            <div className="h-56 bg-beige-50 mb-8 flex items-center justify-center border border-beige-100 overflow-hidden">
                {/* Placeholder for First Person View */}
-               <span className="text-gray-500 font-mono text-sm">Visite Immersive</span>
+               <Smartphone className="w-12 h-12 text-beige-300" />
             </div>
-            <h3 className="text-xl font-semibold mb-2">Visite Immersive</h3>
-            <p className="text-gray-400 text-sm">
-              Plongez vos clients au cœur du bien avec une vue à la première personne ultra-réaliste.
+            <h3 className="text-xl font-serif mb-3 text-gray-900">Visite Immersive</h3>
+            <p className="text-gray-500 text-sm leading-relaxed mb-6 font-light">
+              Une expérience à la première personne. Plongez vos clients au cœur de leur futur chez-eux avec un réalisme saisissant.
             </p>
-            <div className="mt-4 inline-flex items-center text-xs font-medium px-2.5 py-0.5 rounded-full bg-purple-500/10 text-purple-400">
-              9:16 • Mobile & Stories
+            <div className="inline-flex items-center text-xs font-medium px-3 py-1 bg-gray-50 text-gray-600 uppercase tracking-wider">
+              Mobile & Social
             </div>
           </motion.div>
 
           {/* Format 3: Plan Masse */}
           <motion.div 
             whileHover={{ y: -5 }}
-            className="group relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 p-6 hover:border-green-500/50 transition-colors"
+            className="group relative overflow-hidden bg-white p-8 hover:shadow-lg transition-all duration-300 border border-gray-100"
           >
-            <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-              <Monitor className="w-24 h-24" />
-            </div>
-            <div className="h-48 rounded-lg bg-gradient-to-br from-gray-800 to-gray-900 mb-6 flex items-center justify-center border border-white/5">
+            <div className="h-56 bg-beige-50 mb-8 flex items-center justify-center border border-beige-100 overflow-hidden">
                {/* Placeholder for Top Down View */}
-               <span className="text-gray-500 font-mono text-sm">Plan Masse 3D</span>
+               <Monitor className="w-12 h-12 text-beige-300" />
             </div>
-            <h3 className="text-xl font-semibold mb-2">Plan Masse Texturé</h3>
-            <p className="text-gray-400 text-sm">
-              Une vue de dessus enrichie avec textures et mobilier pour mieux comprendre les surfaces.
+            <h3 className="text-xl font-serif mb-3 text-gray-900">Plan Masse Texturé</h3>
+            <p className="text-gray-500 text-sm leading-relaxed mb-6 font-light">
+              Le plan technique réinventé. Une vue de dessus enrichie avec textures et mobilier pour une lisibilité parfaite.
             </p>
-            <div className="mt-4 inline-flex items-center text-xs font-medium px-2.5 py-0.5 rounded-full bg-green-500/10 text-green-400">
-              1:1 • Instagram & Social
+            <div className="inline-flex items-center text-xs font-medium px-3 py-1 bg-gray-50 text-gray-600 uppercase tracking-wider">
+              Print & Dossiers
             </div>
           </motion.div>
         </div>
@@ -84,4 +75,3 @@ export function Showcase() {
     </section>
   )
 }
-

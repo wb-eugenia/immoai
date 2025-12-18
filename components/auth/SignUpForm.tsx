@@ -77,7 +77,7 @@ export function SignUpForm() {
               <Input
                 id="firstName"
                 placeholder="Jean"
-                className="bg-white/5 border-white/10 text-white placeholder:text-gray-500 focus:border-blue-500"
+                className="bg-white border-gray-200 text-black placeholder:text-gray-400 focus:border-black"
                 {...form.register("firstName")}
               />
               {form.formState.errors.firstName && (
@@ -89,7 +89,7 @@ export function SignUpForm() {
               <Input
                 id="lastName"
                 placeholder="Dupont"
-                className="bg-white/5 border-white/10 text-white placeholder:text-gray-500 focus:border-blue-500"
+                className="bg-white border-gray-200 text-black placeholder:text-gray-400 focus:border-black"
                 {...form.register("lastName")}
               />
               {form.formState.errors.lastName && (
@@ -104,7 +104,7 @@ export function SignUpForm() {
               id="email"
               type="email"
               placeholder="jean.dupont@exemple.com"
-              className="bg-white/5 border-white/10 text-white placeholder:text-gray-500 focus:border-blue-500"
+              className="bg-white border-gray-200 text-black placeholder:text-gray-400 focus:border-black"
               {...form.register("email")}
             />
             {form.formState.errors.email && (
@@ -118,10 +118,10 @@ export function SignUpForm() {
               onValueChange={(value) => form.setValue("role", value)} 
               defaultValue={form.getValues("role")}
             >
-              <SelectTrigger className="bg-white/5 border-white/10 text-white focus:border-blue-500">
+              <SelectTrigger className="bg-white border-gray-200 text-black focus:border-black">
                 <SelectValue placeholder="Sélectionnez votre activité" />
               </SelectTrigger>
-              <SelectContent className="bg-[#1a1a1a] border-white/10 text-white">
+              <SelectContent className="bg-white border-gray-200 text-black">
                 <SelectItem value="agent">Agent Immobilier</SelectItem>
                 <SelectItem value="particulier">Particulier</SelectItem>
                 <SelectItem value="conciergerie">Conciergerie</SelectItem>
@@ -133,7 +133,7 @@ export function SignUpForm() {
             )}
           </div>
 
-          <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white" disabled={isLoading}>
+          <Button type="submit" className="w-full bg-black hover:bg-gray-800 text-white" disabled={isLoading}>
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
             S'inscrire
           </Button>
@@ -141,18 +141,17 @@ export function SignUpForm() {
       </form>
       <div className="relative">
         <div className="absolute inset-0 flex items-center">
-          <span className="w-full border-t border-white/10" />
+          <span className="w-full border-t border-gray-200" />
         </div>
         <div className="relative flex justify-center text-xs uppercase">
-          <span className="bg-black px-2 text-gray-400">
+          <span className="bg-white px-2 text-gray-500">
             Déjà un compte ?
           </span>
         </div>
       </div>
-      <Button variant="outline" className="w-full border-white/10 text-white hover:bg-white/5 hover:text-white" asChild>
+      <Button variant="outline" className="w-full border-gray-200 text-black hover:bg-gray-50 hover:text-black" asChild>
         <Link href="/login">Se connecter</Link>
       </Button>
     </div>
   )
 }
-
