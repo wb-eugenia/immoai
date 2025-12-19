@@ -23,7 +23,7 @@ export function CalComWidget() {
   return (
     <div className="w-full" style={{ minHeight: '700px' }}>
       <iframe
-        src="https://app.cal.eu/immoai/30min"
+        src="https://app.cal.eu/immoai/30min?overlayCalendar=true"
         style={{
           width: '100%',
           height: '100%',

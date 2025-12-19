@@ -132,19 +132,6 @@ export function Comparison() {
             </div>
           </div>
         </div>
-
-        {/* Bottom CTA */}
-        <div className="mt-16 text-center">
-          <p className="text-gray-600 mb-6">
-            <span className="font-semibold text-gray-900">QT G 2 3 0</span> créent des visualisations en minutes au lieu de semaines.
-          </p>
-          <Button className="bg-gray-900 text-white hover:bg-gray-800 px-8 py-6 text-lg" asChild>
-            <a href="/signup">Commencer gratuitement</a>
-          </Button>
-          <p className="text-sm text-gray-500 mt-4">
-            Aucune carte bancaire requise • Plan gratuit disponible à vie
-          </p>
-        </div>
       </div>
     </section>
   )

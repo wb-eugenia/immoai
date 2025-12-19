@@ -44,9 +44,6 @@ export function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center gap-4">
-          <Link href="/login" className="text-sm font-medium text-gray-600 hover:text-black transition-colors">
-            Connexion
-          </Link>
           <Button variant="default" className="bg-black text-white hover:bg-gray-800" asChild>
             <Link href="/signup">Commencer</Link>
           </Button>
@@ -70,9 +67,6 @@ export function Navbar() {
               <Link href={getContactLink()} onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
             </div>
             <div className="flex flex-col items-center gap-4 mt-4">
-              <Link href="/login" className="text-lg font-medium text-gray-600" onClick={() => setIsMobileMenuOpen(false)}>
-                Connexion
-              </Link>
               <Button variant="default" className="bg-black text-white hover:bg-gray-800 w-full px-8" asChild onClick={() => setIsMobileMenuOpen(false)}>
                 <Link href="/signup">Commencer</Link>
               </Button>
