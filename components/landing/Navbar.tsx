@@ -27,6 +27,11 @@ export function Navbar() {
     return `#${anchor}`
   }
 
+  const getStartLink = () => {
+    if (isHubPage || isPricingPage) return "/#hero"
+    return "#hero"
+  }
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-gray-200 bg-white/80 backdrop-blur-md">
       <div className="flex h-16 items-center justify-between px-4 md:px-6 max-w-7xl mx-auto">
@@ -45,7 +50,7 @@ export function Navbar() {
 
         <div className="hidden md:flex items-center gap-4">
           <Button variant="default" className="bg-black text-white hover:bg-gray-800" asChild>
-            <Link href="/signup">Commencer</Link>
+            <Link href={getStartLink()}>Commencer</Link>
           </Button>
         </div>
 
@@ -68,7 +73,7 @@ export function Navbar() {
             </div>
             <div className="flex flex-col items-center gap-4 mt-4">
               <Button variant="default" className="bg-black text-white hover:bg-gray-800 w-full px-8" asChild onClick={() => setIsMobileMenuOpen(false)}>
-                <Link href="/signup">Commencer</Link>
+                <Link href={getStartLink()}>Commencer</Link>
               </Button>
             </div>
           </div>

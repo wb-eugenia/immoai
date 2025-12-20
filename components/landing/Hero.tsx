@@ -5,7 +5,7 @@ import { LeadForm } from "./LeadForm"
 
 export function Hero() {
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-[90vh] px-4 pt-20 pb-12 md:pt-24 md:pb-16 text-center overflow-hidden bg-beige-50">
+    <section id="hero" className="relative flex flex-col items-center justify-center min-h-[90vh] px-4 pt-20 pb-12 md:pt-24 md:pb-16 text-center overflow-hidden bg-beige-50">
       {/* Subtle Background */}
       <div className="absolute inset-0 pointer-events-none opacity-20 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-beige-200 via-transparent to-transparent" />
 

@@ -98,7 +98,7 @@ export function FAQ() {
             Commencez à créer des visualisations 3D professionnelles à partir de n'importe quel plan. Commencez gratuitement, aucune carte bancaire requise.
           </p>
           <Button className="bg-white text-gray-900 hover:bg-gray-100 px-6 md:px-8 py-5 md:py-6 text-base md:text-lg mb-6 md:mb-8 rounded-none border-0" asChild>
-            <a href="/signup">Commencer l'essai gratuit</a>
+            <a href="#hero">Commencer l'essai gratuit</a>
           </Button>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-8 text-xs md:text-sm text-gray-400">
             <div className="text-center">
